@@ -6,10 +6,10 @@ import { NextRequest } from "next/server";
 
 export async function middleware(request: NextRequest) {
     const SUPABASE_URL =
-    process.env.https://jhpdfrasoxvqfldvrnqe.supabase.co;
+    process.env.NEXT_PUBLIC_SUPABASE_URL;
 
   const SUPABASE_ANON_KEY =
-    process.env.eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImpocGRmcmFzb3h2cWZsZHZybnFlIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzgxNjQ3MTUsImV4cCI6MjA5Mzc0MDcxNX0.c4fvUkjfHZ8HNf59GErmmAq_9cQYaxy6YDe81wn_LgE;
+    process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY;
 
   // Check environment variables
   if (!SUPABASE_URL || !SUPABASE_ANON_KEY) {
