@@ -229,7 +229,7 @@ export default function AppPage() {
                 )}
               </PopoverContent>
             </Popover>
-            <Button type="submit" variant="hero" disabled={adding}>
+            <Button type="submit" variant="default" disabled={adding}>
               {adding ? <Loader2 className="h-4 w-4 animate-spin" /> : <Plus className="h-4 w-4" />}
               Add
             </Button>
