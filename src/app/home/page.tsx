@@ -33,7 +33,7 @@ type Filter = "all" | "active" | "completed";
 const titleSchema = z.string().trim().min(1, "Add a title").max(200, "Too long");
 
 export default function AppPage() {
-  const { user, loading, signOut } = useAuth();
+  const { user, loading } = useAuth();
   const router = useRouter();
 
   const [tasks, setTasks] = useState<Task[]>([]);
@@ -169,7 +169,8 @@ export default function AppPage() {
           </div>
           <div className="flex items-center gap-3">
             <span className="hidden text-sm text-muted-foreground sm:inline">{user.email}</span>
-            <Button variant="ghost" size="sm" onClick={() => signOut()}>
+            {/* <Button variant="ghost" size="sm" onClick={() => signOut()}> */}
+            <Button variant="ghost" size="sm">
               <LogOut className="h-4 w-4" /> Sign out
             </Button>
           </div>

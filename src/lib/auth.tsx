@@ -44,32 +44,10 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
   if (error) {
     return { error };
   }
-
-  alert("Signup successful! Check your email.");
+  // alert("Signup successful! Check your email.");
 
   return { error: null };
 };
-
-  // const signUp = async (email: string, password: string) => {
-  //   // 1. Create the Auth user
-  //   const { data, error: authError } = await supabase.auth.signUp({ email, password });
-    
-  //   if (authError) return { error: authError };
-
-  //   // 2. Save data to 'form-data' table if signup successful
-  //   // if (data.user) {
-  //   //   const { error: dbError } = await supabase
-  //   //     .from('form-data')
-  //   //     .insert([{ 
-  //   //         id: data.user.id, 
-  //   //         email: email, 
-  //   //     }]);
-      
-  //   //   if (dbError) console.error("Database sync error:", dbError.message);
-  //   // }
-
-  //   return { error: null };
-  // };
 
   return (
     <AuthContext.Provider value={{ user, loading, signIn, signUp }}>
